@@ -1,2 +1,3 @@
 SlidePanel
 ==========
+<pre>test</pre>
