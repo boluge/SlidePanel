@@ -2,8 +2,8 @@ SlidePanel
 ==========
 javaScript
 <pre>jQuery.slideParam({
-  id: 'slideLeft',
-  position: 'left',
+	id: 'slideLeft',
+	position: 'left',
 	speed: 350
 });</pre>
 html
