@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="fr">
+<head>
+	<meta charset="UTF-8">
+	<title>SlidePanel</title>
+	<link rel="stylesheet" href="css/style.css">
+	<script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>
+	<script src="js/slidePanel.js"></script>
+	<script>
+	jQuery(document).ready(function(){
+		jQuery(document).slideParam({
+			id: 'slideLeft',
+			position: 'left',
+			speed: 350
+		});
+	});		
+	</script>
+</head>
+<body>
+	<div class="container">
+		<h1>Slide Panel</h1>
+		<a href="#slideLeft" class="btn">Voir le panel</a>
+		<hr>
+		<pre>jQuery(document).slideParam({
+	id: 'slideLeft',
+	position: 'left',
+	speed: 350
+});</pre>
+		<hr>
+		<pre>jQuery(document).slideParam({
+	id: 'slideRight',
+	position: 'right',
+	speed: 350
+});</pre>
+	</div>
+	
+	
+	<div id="slideLeft">
+		<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maxime, vero, fugiat, quas, natus distinctio nisi saepe repellat a animi necessitatibus libero culpa perferendis atque rerum nostrum eos tenetur perspiciatis soluta.</p>
+	</div>
+</body>
+</html>

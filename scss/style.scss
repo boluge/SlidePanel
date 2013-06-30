@@ -1,0 +1,107 @@
+@import "compass";
+@import "compass/reset";
+@import "slidePanel";
+
+/***************************/
+
+$FontSize: 14; // en px
+$lineHeight:1.5; // en em
+
+$titleColor:#222; // Couleur des titres
+$textColor:#666; // Couleur du texte
+$blockquoteColor:#999; // Couleur des citations
+$borderBqColor:#bada55; // Couleur de la bordure du Blockquote
+
+$hrColor:#ddd;
+
+@import url(http://fonts.googleapis.com/css?family=PT+Sans|Kreon);
+
+$titleFont:'Kreon', serif;
+$textFont:'PT Sans', sans-serif;
+
+/***************************/
+
+$TypoBase:$FontSize * 1px;
+$Hligne:$lineHeight * 1em;
+$margeBottom:$FontSize * $lineHeight * 1px;
+
+body {
+	font-size: $TypoBase;
+	line-height: $Hligne;
+	letter-spacing: 1px;
+	font-family: $textFont;
+	color:$textColor;
+
+	p,h1,h2,h3,h4,h5,h6,ul,ol,blockquote,hr {
+		margin-bottom: $margeBottom;
+	}
+	hr {
+		margin: $margeBottom 0;
+		height: 1px;
+  		padding: 0;
+  		color: $hrColor;
+  		background-color: $hrColor;
+  		border: 0;
+	}
+	@for $i from 1 through 6 {
+		h#{$i}{
+			font-size: (1+(($lineHeight - 1)/6) * (6- $i))*1em;
+			font-family: $titleFont;
+			color: $titleColor;
+		}
+	}
+	blockquote{
+		padding-left: 10px;
+		margin-left: 20px;
+		border-left: 3px solid $borderBqColor;
+		color: $blockquoteColor;
+		font-style: italic;
+	}
+	ul,ol {
+		list-style-type: square;
+		padding-left: 30px;
+		list-style-position: outside;
+		color:darken($textColor,20);
+	}
+	ol {
+		list-style-type: upper-roman;
+	}
+	a.btn {
+		@include border-radius(3px);
+		background:#08c;
+		padding: 5px 10px;
+		color: #fff;
+		text-decoration: none;
+	}
+	pre {
+		@include border-radius(3px);
+		background:#f2f2f2;
+		padding: 10px 15px;
+		margin-bottom: 15px;
+	}
+}
+
+body{
+	background-size: $Hligne $Hligne;
+	background-position: 0 -6px;
+}
+.container {
+	width: 640px;
+	margin: 0 auto;
+	padding: 0 10px;
+	padding-top: 20px;
+}
+img {
+	@include border-radius(5px);
+}
+img.alignleft {
+	margin-right: 20px;
+	float: left;
+}
+img.alignright {
+	float: right;
+	margin-left: 20px;
+}
+p{
+	text-align: justify;
+}

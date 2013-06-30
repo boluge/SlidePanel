@@ -1,0 +1,14 @@
+@import "compass";
+
+/*** Variables ***/
+$slide:'#slideLeft, #slideRight'; //ID du panel
+$bg: #08c; // Couleur de fond du panel
+$width:250px; //Largeur du panel
+$text:#fff;
+
+#{$slide} {
+	width:$width;
+	background:$bg;
+	padding: 10px;
+	color: $text;
+}
